@@ -212,6 +212,14 @@ export default function HomePage() {
                 <li>Round 8 - 10/07/2025</li>
                 <li>Round 9 - 17/07/2025</li>
               </ul>
+              <div className="mt-6">
+                <a
+                  href="/map"
+                  className="text-red-700 underline hover:text-red-500"
+                >
+                  View Campaign Map
+                </a>
+              </div>
             </div>
           </div>
         </div>

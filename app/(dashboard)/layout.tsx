@@ -38,10 +38,13 @@ function UserMenu() {
         >
           Pricing
         </Link> */}
-        <Link href="/rules">
+        <Link href="/rules" className='text-sm font-medium text-stone-300 hover:text-stone-100'>
         Rules
         </Link>
-        <Button asChild className="rounded-full">
+        <Link href="/map" className='text-sm font-medium text-stone-300 hover:text-stone-100'>
+        Map
+        </Link>
+        <Button asChild className="rounded-full display-none">
           <Link href="/sign-up">Sign Up</Link>
         </Button>
       </>
