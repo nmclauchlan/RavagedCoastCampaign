@@ -9,6 +9,9 @@ export async function middleware(request: NextRequest) {
   const sessionCookie = request.cookies.get('session');
   const isProtectedRoute = pathname.startsWith(protectedRoutes);
 
+
+  
+  console.log('Middleware triggered for:', pathname); // Debug log
   if (isProtectedRoute && !sessionCookie) {
     return NextResponse.redirect(new URL('/sign-in', request.url));
   }
