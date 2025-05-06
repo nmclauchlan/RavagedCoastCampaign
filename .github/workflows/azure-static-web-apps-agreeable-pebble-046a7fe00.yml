@@ -28,6 +28,8 @@ jobs:
           node-version: 18.20.8
       - name: Install OIDC Client from Core Package
         run: npm install @actions/core@1.6.0 @actions/http-client
+      - name: Set Environment Variables
+        run: echo "POSTGRES_URL=${{ secrets.POSTGRES_URL }}" >> $GITHUB_ENV
       - name: Get Id Token
         uses: actions/github-script@v6
         id: idtoken
