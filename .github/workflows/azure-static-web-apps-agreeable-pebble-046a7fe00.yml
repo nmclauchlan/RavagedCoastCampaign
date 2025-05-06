@@ -30,6 +30,14 @@ jobs:
         run: npm install @actions/core@1.6.0 @actions/http-client
       - name: Set Environment Variables
         run: echo "POSTGRES_URL=${{ secrets.POSTGRES_URL }}" >> $GITHUB_ENV
+      - name: Set Environment Variables
+        run: echo "AUTH_SECRET=${{ secrets.AUTH_SECRET }}" >> $GITHUB_ENV
+      - name: Set Environment Variables
+        run: echo "BASE_URL=${{ secrets.BASE_URL }}" >> $GITHUB_ENV
+      - name: Set Environment Variables
+        run: echo "STRIPE_SECRET_KEY=${{ secrets.STRIPE_SECRET_KEY }}" >> $GITHUB_ENV
+      - name: Set Environment Variables
+        run: echo "STRIPE_WEBHOOK_SECRET=${{ secrets.STRIPE_WEBHOOK_SECRET }}" >> $GITHUB_ENV
       - name: Get Id Token
         uses: actions/github-script@v6
         id: idtoken
