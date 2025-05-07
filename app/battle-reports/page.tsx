@@ -4,6 +4,7 @@ export default function MapPage() {
   const battleReports = [
     {
       title: "Battle of the Burning Plains",
+      slug: "battle-of-the-burning-plains",
       armies: "Stormcast Eternals vs Orruk Warclans",
       winner: "Stormcast Eternals",
       tokens: 2,
@@ -13,6 +14,7 @@ export default function MapPage() {
     },
     {
       title: "Siege of the Black Fortress",
+      slug: "siege-of-the-black-fortress",
       armies: "Soulblight Gravelords vs Lumineth Realm-lords",
       winner: "Lumineth Realm-lords",
       tokens: 3,
@@ -22,6 +24,7 @@ export default function MapPage() {
     },
     {
       title: "Clash at the Shattered Coast",
+      slug: "clash-at-the-shattered-coast",
       armies: "Fyreslayers vs Idoneth Deepkin",
       winner: "Idoneth Deepkin",
       tokens: 1,
@@ -38,7 +41,7 @@ export default function MapPage() {
           <h1 className="text-4xl font-bold mb-4">Battle Reports</h1>
           <div className="space-y-4">
             {battleReports.map((report, idx) => (
-              <div key={idx} className="bg-stone-700 p-4 rounded shadow">
+              <div id={report.slug} key={idx} className="bg-stone-700 p-4 rounded shadow">
                 <p className="text-gray-200">Round: {report.round}</p>
                 <h2 className="text-2xl font-semibold">{report.title}</h2>
                 <p className="text-gray-300">{report.armies}</p>

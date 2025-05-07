@@ -52,7 +52,7 @@ export default function MapPage() {
                 <div>
                   <h3> Battle Report</h3>
                 </div>
-                <div>Stormcast vs Skaven</div>
+                <div><a href="/battle-reports#clash-at-the-shattered-coast">Stormcast vs Skaven</a></div>
                 <div>Stormcast Victory (3 Emberstones)</div>
               </Popup>
             </Marker>
