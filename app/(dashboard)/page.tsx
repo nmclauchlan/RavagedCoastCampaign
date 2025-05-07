@@ -48,57 +48,6 @@ export default function HomePage() {
           <div className="lg:grid lg:grid-cols-3 lg:gap-8">
             <div>
               <div className="flex items-center justify-center h-12 w-12 rounded-md bg-red-700 text-white">
-                <Sword className="h-6 w-6" />
-              </div>
-              <div className="mt-5">
-                <h2 className="text-lg font-medium text-gray-300">
-                  Build Your Warband
-                </h2>
-                <p className="mt-2 text-base text-gray-500">
-                  Assemble your warriors, choose your allegiance, and prepare
-                  for battle in the Mortal Realms.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-10 lg:mt-0">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-red-700 text-white">
-                <Map className="h-6 w-6" />
-              </div>
-              <div className="mt-5">
-                <h2 className="text-lg font-medium text-gray-300">
-                  Conquer Territories
-                </h2>
-                <p className="mt-2 text-base text-gray-500">
-                  Expand your domain by claiming territories and resources to
-                  strengthen your warband.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-10 lg:mt-0">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-red-700 text-white">
-                <ArrowRight className="h-6 w-6" />
-              </div>
-              <div className="mt-5">
-                <h2 className="text-lg font-medium text-gray-300">
-                  Forge Your Legend
-                </h2>
-                <p className="mt-2 text-base text-gray-500">
-                  Write your saga as you achieve glory, gain renown, and leave
-                  your mark on the Ravaged Coast.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-stone-800 w-full">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-3 lg:gap-8">
-            <div>
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-red-700 text-white">
                 <BookOpen className="h-6 w-6" />
               </div>
               <div className="mt-5">
@@ -157,6 +106,57 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <section className="py-16 bg-stone-800 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:grid lg:grid-cols-3 lg:gap-8">
+            <div>
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-red-700 text-white">
+                <Sword className="h-6 w-6" />
+              </div>
+              <div className="mt-5">
+                <h2 className="text-lg font-medium text-gray-300">
+                  Build Your Warband
+                </h2>
+                <p className="mt-2 text-base text-gray-500">
+                  Assemble your warriors, choose your allegiance, and prepare
+                  for battle in the Mortal Realms.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-10 lg:mt-0">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-red-700 text-white">
+                <Map className="h-6 w-6" />
+              </div>
+              <div className="mt-5">
+                <h2 className="text-lg font-medium text-gray-300">
+                  Conquer Territories
+                </h2>
+                <p className="mt-2 text-base text-gray-500">
+                  Expand your domain by claiming territories and resources to
+                  strengthen your warband.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-10 lg:mt-0">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-red-700 text-white">
+                <ArrowRight className="h-6 w-6" />
+              </div>
+              <div className="mt-5">
+                <h2 className="text-lg font-medium text-gray-300">
+                  Forge Your Legend
+                </h2>
+                <p className="mt-2 text-base text-gray-500">
+                  Write your saga as you achieve glory, gain renown, and leave
+                  your mark on the Ravaged Coast.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
   );
 }
