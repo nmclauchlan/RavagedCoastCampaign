@@ -19,15 +19,8 @@ export default function MapPage() {
   const aspectRatio = 1350 / 2070;
 
   return (
-    <main className="min-h-screen bg-stone-800 flex items-center justify-center">
-      <div
-        className="w-full"
-        style={{
-          height: `calc(100vw * ${aspectRatio})`,
-          maxHeight: '90vh',
-          minHeight: '400px',
-        }}
-      >
+    <main className="w-screen h-screen bg-stone-800">
+      <div className="w-full h-full">
         <h1 className="text-4xl font-bold text-center text-white mb-4">Campaign Map</h1>
         <MapContainer
           center={[0, -100] as LatLngExpression}
