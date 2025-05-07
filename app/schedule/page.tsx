@@ -1,15 +1,19 @@
-import React from 'react';
+import React from "react";
+import Layout from "../(dashboard)/layout";
 
 export default function SchedulePage() {
   return (
-    <div className="p-6 text-white bg-neutral-900">
-      <h1 className="text-2xl font-bold mb-4">Campaign Schedule</h1>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Layout>
+      <div className="max-w-3xl mx-auto p-6 text-white bg-neutral-700">
+        <h1 className="text-2xl font-bold mb-4">Campaign Schedule</h1>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-1 lg:gap-8">
             <div className="p-6 text-white bg-neutral-900 rounded-lg shadow-lg">
               <h1 className="text-2xl font-bold mb-4">Campaign Rounds</h1>
               <p className="mb-4">
-                Our Path to Glory campaign rounds will be held at Jolt Games weekly on Thursdays from 6:30pm. There is a one-time entry fee of $35.
+                Our Path to Glory campaign rounds will be held at Jolt Games
+                weekly on Thursdays from 6:30pm. There is a one-time entry fee
+                of $35.
               </p>
               <ul className="list-disc list-inside text-gray-300">
                 <li>Round 1 - 22/05/2025</li>
@@ -33,6 +37,7 @@ export default function SchedulePage() {
             </div>
           </div>
         </div>
-    </div>
+      </div>
+    </Layout>
   );
 }

@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { use, useState, Suspense } from 'react';
 import { Button } from '@/components/ui/button';
-import { CircleIcon, Home, LogOut } from 'lucide-react';
+import { CircleIcon, Home, LogOut, Menu } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -31,33 +31,33 @@ function UserMenu() {
 
   if (!user) {
     return (
-      <>
-        {/* <Link
-          href="/pricing"
-          className="text-sm font-medium text-gray-700 hover:text-gray-900"
-        >
-          Pricing
-        </Link> */}
-        <Link href="/rules" className='text-sm font-medium text-stone-300 hover:text-stone-100'>
-        Rules
-        </Link>
-        <Link href="/schedule" className='text-sm font-medium text-stone-300 hover:text-stone-100'>
-        Schedule
-        </Link>
-        <Link href="/armies" className='text-sm font-medium text-stone-300 hover:text-stone-100'>
-        Players  
-        </Link>
-        <Link href="/battle-reports" className='text-sm font-medium text-stone-300 hover:text-stone-100'>
-        Battle Reports
-        </Link>
-        <Link href="/map" className='text-sm font-medium text-stone-300 hover:text-stone-100'>
-        Map
-        </Link>
-
-        <Button asChild className="rounded-full display-none">
-          <Link href="/sign-up">Sign Up</Link>
-        </Button>
-      </>
+      <DropdownMenu open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+        <DropdownMenuTrigger asChild>
+          <Button variant="ghost" className="p-2">
+            <Menu className="h-6 w-6 text-stone-300" />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end" className="flex flex-col gap-1">
+          <DropdownMenuItem>
+            <Link href="/rules">Rules</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="/schedule">Schedule</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="/armies">Players</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="/battle-reports">Battle Reports</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="/map">Map</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="/sign-up">Sign Up</Link>
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
     );
   }
 
