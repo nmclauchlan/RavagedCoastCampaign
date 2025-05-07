@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sword, Map } from "lucide-react";
+import { ArrowRight, Sword, Map, BookOpen, Calendar, FileText } from "lucide-react";
 import { Terminal } from "./terminal";
 
 export default function HomePage() {
@@ -93,131 +93,64 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="py-16 bg-stone-800">
+
+      <section className="py-16 bg-stone-800 w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-1 lg:gap-8">
-            <div className="p-6 text-white bg-neutral-900">
-              <h1 className="text-2xl font-bold mb-4">Campaign Rules</h1>
-              <p className="mb-4">
-                The campaign will be using the rules in the{" "}
-                <strong>Ravaged Coast</strong> book, the{" "}
-                <strong>Path to Glory</strong> rules in the 4th edition Core
-                Book do not apply. The <strong>General's Hand Book</strong> is
-                not used so no Battle Tactics! Players are expected to bring
-                their copy of Ravaged Coast to each game.
-              </p>
-              <h2 className="text-xl font-semibold mb-2">Roster Creation</h2>
-              <p className="mb-4">
-                Rules for roster creation are laid out in the Ravaged Coast
-                book:
-                <ul className="list-disc list-inside">
-                  <li>
-                    A unit cap of 350 points (excluding Sons of Behemat heroes).
-                  </li>
-                  <li>A limit of 1000 points total.</li>
-                  <li>
-                    Unique heroes are allowed, but not preferred (350 point
-                    limit still applies).
-                  </li>
-                  <li>
-                    If your army has a battletome, you can use the ‘Anvil of
-                    Apotheosis’ for a narrative feel.
-                  </li>
-                  <li>
-                    Kitbashed heroes are strongly encouraged, as well as a cool
-                    model for your regiment of renown.
-                  </li>
-                  <li>
-                    Allies are allowed, but no other Regiments of Renown outside
-                    the Ravaged Coast Book.
-                  </li>
-                </ul>
-                Be careful when creating your roster - you won't be able to
-                change it without spending shards.
-              </p>
-              <p className="mb-4">
-                Try to bring a physical copy of your roster written in pencil.
-                If you are unable to photocopy the roster pages in the back of
-                the book, a blank roster will be provided for you.
-              </p>
-              <h2 className="text-xl font-semibold mb-2">Aftermath Sequence</h2>
-              <p className="mb-4">
-                The aftermath sequence <strong>MUST</strong> be completed at the
-                end of every game. Update your roster and return it to the
-                folder behind the counter. Your opponent must be able to see
-                your dice rolls. You can bank Emberstone Shards if you'd like,
-                but you cannot update your roster before a game. The aftermath
-                sequence takes about 10-15 minutes.
-              </p>
-              <h2 className="text-xl font-semibold mb-2">Emberstone Shards</h2>
-              <p className="mb-4">
-                Emberstone shards should be presented differently to objective
-                tokens/markers. Creating emberstone clusters on a 40mm base is
-                encouraged. Cut up some sprue and use your painting skills to
-                make it look like glowing hot shards, or however you imagine
-                Emberstone to look.
-              </p>
-              <h2 className="text-xl font-semibold mb-2">Game Length</h2>
-              <p className="mb-4">
-                Game lengths are variable and can potentially go on for 6
-                rounds. If you are tight on time, ask your opponent if you can
-                cap at 5 rounds. Remember you still need to do the aftermath
-                sequence once the battle has ended.
-              </p>
-              <h2 className="text-xl font-semibold mb-2">Battleplans</h2>
-              <p className="mb-4">
-                Path to Glory is your story, so no two battles will be the same.
-                There will be no set battleplan for each round, so you must roll
-                on the table for each round. If you roll on a battleplan that
-                you or your opponent have already played, you can reroll on the
-                table for a different one if you wish.
-              </p>
-              <h2 className="text-xl font-semibold mb-2">
-                Winning the Campaign
-              </h2>
-              <p className="mb-4">
-                Once a player has won a Major Victory on Hel's Claw, the
-                campaign ends and that player is declared the winner. However,
-                you can continue to keep playing through the event should you
-                choose to do so.
-              </p>
-              <h2 className="text-xl font-semibold mb-2">Catch-Up Games</h2>
-              <p className="mb-4">
-                If you are unable to attend any rounds, you can arrange to play
-                a catch-up game with someone in the league on a day that suits
-                you. Catch-up games must be played in store. If you wish to
-                switch between armies throughout the campaign, you may do so,
-                but you cannot play more than one game per army per week.
-              </p>
+          <div className="lg:grid lg:grid-cols-3 lg:gap-8">
+            <div>
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-red-700 text-white">
+                <BookOpen className="h-6 w-6" />
+              </div>
+              <div className="mt-5">
+                <h2 className="text-lg font-medium text-gray-300">
+                  View Rules
+                </h2>
+                <p className="mt-2 text-base text-gray-500">
+                  Read the campaign rules to understand gameplay, warband builds, and victory conditions.
+                </p>
+                <a href="/rules">
+                  <Button size="sm" variant="outline" className="mt-4 rounded-full">
+                    View Rules
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </a>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section className="py-16 bg-stone-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-1 lg:gap-8">
-            <div className="p-6 text-white bg-neutral-900 rounded-lg shadow-lg">
-              <h1 className="text-2xl font-bold mb-4">Campaign Rounds</h1>
-              <p className="mb-4">
-                Our Path to Glory campaign rounds will be held at Jolt Games weekly on Thursdays from 6:30pm. There is a one-time entry fee of $35.
-              </p>
-              <ul className="list-disc list-inside text-gray-300">
-                <li>Round 1 - 22/05/2025</li>
-                <li>Round 2 - 29/05/2025</li>
-                <li>Round 3 - 05/06/2025</li>
-                <li>Round 4 - 12/06/2025</li>
-                <li>Round 5 - 19/06/2025</li>
-                <li>Round 6 - 26/06/2025</li>
-                <li>Round 7 - 03/07/2025</li>
-                <li>Round 8 - 10/07/2025</li>
-                <li>Round 9 - 17/07/2025</li>
-              </ul>
-              <div className="mt-6">
-                <a
-                  href="/map"
-                  className="text-red-700 underline hover:text-red-500"
-                >
-                  View Campaign Map
+            <div className="mt-10 lg:mt-0">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-red-700 text-white">
+                <Calendar className="h-6 w-6" />
+              </div>
+              <div className="mt-5">
+                <h2 className="text-lg font-medium text-gray-300">
+                  Schedule
+                </h2>
+                <p className="mt-2 text-base text-gray-500">
+                  Keep track of upcoming battles, events, and campaign milestones.
+                </p>
+                <a href="/schedule">
+                  <Button size="sm" variant="outline" className="mt-4 rounded-full">
+                    View Schedule
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </a>
+              </div>
+            </div>
+            <div className="mt-10 lg:mt-0">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-red-700 text-white">
+                <FileText className="h-6 w-6" />
+              </div>
+              <div className="mt-5">
+                <h2 className="text-lg font-medium text-gray-300">
+                  Battle Reports
+                </h2>
+                <p className="mt-2 text-base text-gray-500">
+                  Review past battle reports to analyze strategies, outcomes, and improve your tactics.
+                </p>
+                <a href="/battle-reports">
+                  <Button size="sm" variant="outline" className="mt-4 rounded-full">
+                    View Reports
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
                 </a>
               </div>
             </div>

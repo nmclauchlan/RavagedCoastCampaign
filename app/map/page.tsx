@@ -30,6 +30,31 @@ export default function MapPage() {
 
   const aspectRatio = 1350 / 2070;
 
+  // data‐driven marker definitions (use real coords for each)
+  const markers = [
+    {
+      position: [10, -200] as LatLngExpression,
+      title: "Battle of the Burning Plains",
+      slug: "battle-of-the-burning-plains",
+      armies: "Stormcast Eternals vs Orruk Warclans",
+      winner: "Stormcast Eternals",
+    },
+    {
+      position: [50, -50] as LatLngExpression,
+      title: "Siege of the Black Fortress",
+      slug: "siege-of-the-black-fortress",
+      armies: "Soulblight Gravelords vs Lumineth Realm-lords",
+      winner: "Lumineth Realm-lords",
+    },
+    {
+      position: [0, -100] as LatLngExpression,
+      title: "Clash at the Shattered Coast",
+      slug: "clash-at-the-shattered-coast",
+      armies: "Fyreslayers vs Idoneth Deepkin",
+      winner: "Idoneth Deepkin",
+    },
+  ];
+
   return (
     <Layout>
       <main className="w-screen h-screen bg-stone-800">
@@ -47,15 +72,19 @@ export default function MapPage() {
               url="/assets/images/Great_Parch_Map_06.png"
               bounds={bounds}
             />
-            <Marker position={[0, -100] as LatLngExpression}>
-              <Popup>
-                <div>
-                  <h3> Battle Report</h3>
-                </div>
-                <div><a href="/battle-reports#clash-at-the-shattered-coast">Stormcast vs Skaven</a></div>
-                <div>Stormcast Victory (3 Emberstones)</div>
-              </Popup>
-            </Marker>
+            {markers.map((m, idx) => (
+              <Marker key={idx} position={m.position}>
+                <Popup>
+                  <div>
+                    <h3>Battle Report: {m.title}</h3>
+                  </div>
+                  <div>
+                    <a href={`/battle-reports#${m.slug}`}>{m.armies}</a>
+                  </div>
+                  <div>{m.winner}</div>
+                </Popup>
+              </Marker>
+            ))}
           </MapContainer>
         </div>
       </main>
