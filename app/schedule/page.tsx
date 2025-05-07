@@ -4,11 +4,8 @@ import Layout from "../(dashboard)/layout";
 export default function SchedulePage() {
   return (
     <Layout>
-      <div className="max-w-3xl mx-auto p-6 text-white bg-neutral-700">
-        <h1 className="text-2xl font-bold mb-4">Campaign Schedule</h1>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-1 lg:gap-8">
-            <div className="p-6 text-white bg-neutral-900 rounded-lg shadow-lg">
+      <div className="max-w-3xl mx-auto p-6 text-white bg-neutral-900">
+            <div className="p-6 text-white bg-neutral-700 rounded-lg shadow-lg">
               <h1 className="text-2xl font-bold mb-4">Campaign Rounds</h1>
               <p className="mb-4">
                 Our Path to Glory campaign rounds will be held at Jolt Games
@@ -26,16 +23,6 @@ export default function SchedulePage() {
                 <li>Round 8 - 10/07/2025</li>
                 <li>Round 9 - 17/07/2025</li>
               </ul>
-              <div className="mt-6">
-                <a
-                  href="/map"
-                  className="text-red-700 underline hover:text-red-500"
-                >
-                  View Campaign Map
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </Layout>

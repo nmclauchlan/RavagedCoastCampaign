@@ -50,7 +50,7 @@ export default function MapPage() {
             <Marker position={[0, -100] as LatLngExpression}>
               <Popup>
                 <div>
-                  <h3>Age of Sigmar Battle Report</h3>
+                  <h3> Battle Report</h3>
                 </div>
                 <div>Stormcast vs Skaven</div>
                 <div>Stormcast Victory (3 Emberstones)</div>

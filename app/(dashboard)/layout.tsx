@@ -37,7 +37,7 @@ function UserMenu() {
             <Menu className="h-6 w-6 text-stone-300" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="flex flex-col gap-1">
+        <DropdownMenuContent align="end" className="flex flex-col gap-1 z-[1000]">
           <DropdownMenuItem>
             <Link href="/rules">Rules</Link>
           </DropdownMenuItem>
