@@ -44,9 +44,16 @@ function UserMenu() {
         <Link href="/schedule" className='text-sm font-medium text-stone-300 hover:text-stone-100'>
         Schedule
         </Link>
+        <Link href="/armies" className='text-sm font-medium text-stone-300 hover:text-stone-100'>
+        Players  
+        </Link>
+        <Link href="/battle-reports" className='text-sm font-medium text-stone-300 hover:text-stone-100'>
+        Battle Reports
+        </Link>
         <Link href="/map" className='text-sm font-medium text-stone-300 hover:text-stone-100'>
         Map
         </Link>
+
         <Button asChild className="rounded-full display-none">
           <Link href="/sign-up">Sign Up</Link>
         </Button>
