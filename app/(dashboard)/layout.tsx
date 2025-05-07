@@ -41,6 +41,9 @@ function UserMenu() {
         <Link href="/rules" className='text-sm font-medium text-stone-300 hover:text-stone-100'>
         Rules
         </Link>
+        <Link href="/schedule" className='text-sm font-medium text-stone-300 hover:text-stone-100'>
+        Schedule
+        </Link>
         <Link href="/map" className='text-sm font-medium text-stone-300 hover:text-stone-100'>
         Map
         </Link>

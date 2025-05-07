@@ -5,39 +5,47 @@ import dynamic from 'next/dynamic';
 import 'leaflet/dist/leaflet.css';
 import { LatLngExpression } from 'leaflet';
 
-// Dynamically import MapContainer and ImageOverlay with SSR disabled
 const MapContainer = dynamic(() => import('react-leaflet').then(mod => mod.MapContainer), { ssr: false });
 const ImageOverlay = dynamic(() => import('react-leaflet').then(mod => mod.ImageOverlay), { ssr: false });
+const Marker = dynamic(() => import('react-leaflet').then(mod => mod.Marker), { ssr: false });
+const Popup = dynamic(() => import('react-leaflet').then(mod => mod.Popup), { ssr: false });
 
 export default function MapPage() {
   const bounds: [[number, number], [number, number]] = [
-    [0, 0], // Top-left corner
-    [1350, 2070], // Bottom-right corner (match image dimensions: height x width)
+    [-150, -350],
+    [150, 150],
   ];
 
-  const aspectRatio = 1350 / 2070; // Height divided by width
+  const aspectRatio = 1350 / 2070;
 
   return (
     <main className="min-h-screen bg-stone-800 flex items-center justify-center">
       <div
         className="w-full"
         style={{
-          height: `calc(100vw * ${aspectRatio})`, // Dynamically calculate height
-          maxHeight: '80vh', // Limit height to 80% of the viewport height
-          minHeight: '400px', // Ensure a minimum height
+          height: `calc(100vw * ${aspectRatio})`,
+          maxHeight: '90vh',
+          minHeight: '400px',
         }}
       >
         <h1 className="text-4xl font-bold text-center text-white mb-4">Campaign Map</h1>
         <MapContainer
-          center={[675, 1035]} // Center of the map (half of height and width)
-          zoom={0} // Adjust zoom level to fit the image
+          center={[0, -100] as LatLngExpression}
+          zoom={1.5}
           scrollWheelZoom={true}
-          style={{ height: '100%', width: '100%' }} // Ensure the map fills the container
+          style={{ height: '100%', width: '100%' }}
         >
           <ImageOverlay
-            url="/assets/images/Great_Parch_Map_06.png" // Ensure this path is correct
+            url="/assets/images/Great_Parch_Map_06.png"
             bounds={bounds}
           />
+          <Marker position={[0, -100] as LatLngExpression}>
+            <Popup>
+              <div><h3>Age of Sigmar Battle Report</h3></div>
+              <div>Stormcast vs Skaven</div>
+              <div>Stormcast Victory (3 Emberstones)</div>
+            </Popup>
+          </Marker>
         </MapContainer>
       </div>
     </main>
